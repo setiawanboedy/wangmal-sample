@@ -12,7 +12,7 @@
 	<ul class="menu">
 		<li class="sidebar-title">Menu</li>
 
-		<li class="sidebar-item {{ request()->is('dashboard*') ? 'active' : '' }}">
+		<li class="sidebar-item {{ request()->is('dashboard') ? 'active' : '' }}">
 			<a href="{{ route('dashboard') }}" class='sidebar-link'>
 				<i class="bi bi-grid-fill"></i>
 				<span>Dashboard</span>
@@ -21,44 +21,30 @@
 
 		<li class="sidebar-title"><i class="bi bi-menu-button-wide"></i></li>
 
-		<li class="sidebar-item">
-			<a href="#" class='sidebar-link'>
-				<i class="bi bi-people-fill"></i>
-				<span>Pelajar</span>
-			</a>
-		</li>
-
-		<li class="sidebar-item ">
-			<a href="#" class='sidebar-link'>
-				<i class="bi bi-bookmark-fill"></i>
-				<span>Kelas</span>
-			</a>
-		</li>
-
-		<li class="sidebar-item">
+        <li class="sidebar-item has-sub {{ request()->routeIs('masters.*') ? 'active' : '' }}">
 			<a href="#" class='sidebar-link'>
 				<i class="bi bi-briefcase-fill"></i>
-				<span>Jurusan</span>
+				<span>Master Data</span>
 			</a>
-		</li>
-
-		<li class="sidebar-item has-sub">
-			<a href="#" class='sidebar-link'>
-				<i class="bi bi-cash-stack"></i>
-				<span>Kas</span>
-			</a>
-			<ul class="submenu">
-				<li class="submenu-item">
-					<a href="#">Kas Minggu Ini</a>
+			<ul class="submenu {{ request()->routeIs('masters.*') ? 'active' : '' }}">
+                <li class="submenu-item {{ request()->routeIs('masters.asbab.index') ? 'active' : '' }}">
+					<a href="{{ route('masters.asbab.index') }}">Asbab</a>
 				</li>
-				<li class="submenu-item">
-					<a href="#">Filter Kas</a>
+				<li class="submenu-item {{ request()->routeIs('masters.program.index') ? 'active' : '' }}">
+					<a href="{{ route("masters.program.index") }}">Program</a>
 				</li>
 			</ul>
 		</li>
 
-		<li class="sidebar-item">
-			<a href="#" class='sidebar-link'>
+		<li class="sidebar-item {{ request()->is('dashboard/donate*') ? 'active' : '' }}">
+			<a href="{{ route('donate.index') }}" class='sidebar-link'>
+				<i class="bi bi-cash-stack"></i>
+				<span>Donasi</span>
+			</a>
+		</li>
+
+		<li class="sidebar-item {{ request()->is('dashboard/report*') ? 'active' : '' }}">
+			<a href="{{ route('report.index') }}" class='sidebar-link'>
 				<i class="bi bi-file-earmark-spreadsheet-fill"></i>
 				<span>Laporan</span>
 			</a>
