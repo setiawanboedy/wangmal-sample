@@ -49,7 +49,7 @@
 				<a href="#" class="btn btn-secondary">
 					<span class="badge">5</span> Histori Dihapus
 				</a>
-				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addStudentModal">
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addAsbabModal">
 					<i class="bi bi-plus-circle"></i> Tambah Data
 				</button>
 			</div>
@@ -76,12 +76,12 @@
 </section>
 @endsection
 
-{{-- @push('modal')
-@include('students.modal.create')
-@include('students.modal.show')
-@include('students.modal.edit')
+@push('modals')
+@include('masters.asbab.modal.create')
+{{-- @include('students.modal.show')
+@include('students.modal.edit') --}}
 @endpush
 
-@push('js')
-@include('students.script')
-@endpush --}}
+@push('scripts')
+@include('masters.asbab.scripts.datatable')
+@endpush

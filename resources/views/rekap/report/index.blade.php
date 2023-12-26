@@ -1,4 +1,4 @@
-@extends('layouts.app', ['title' => 'Laporan', 'page_heading' => 'Data Laporan'])
+@extends('layouts.app', ['title' => 'Rekap Laporan', 'page_heading' => 'Rekap Laporan'])
 
 @section('content')
 <section>
