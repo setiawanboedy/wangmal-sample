@@ -39,11 +39,24 @@ th{
     margin-top: 10px;
 }
 .signature {
+    height: 75px; 
+    width: auto;
     text-align: center;
     margin-right: 30px;
     background-position: center;
-    background-repeat: no-repeat; 
-    background-size: 60% 60%;
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position-y: 10px;
+}
+.stemple{
+    width: 350px; /* or any specific width */
+    height: 60px; /* or any specific height */
+    background-image: url('/img/stemple.png');
+    background-size: contain; 
+    background-position: center; /* This will center the image in the div */
+    background-repeat: no-repeat;
+    background-position-x: 0px;
+    margin-bottom: 70px;
 }
 .line {
     border-bottom: 1px solid #000;

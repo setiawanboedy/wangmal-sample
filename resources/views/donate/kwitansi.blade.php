@@ -18,11 +18,14 @@
         </div>
 
         <div class="space-ttd justify-content-center">
-            <div class="signature" style="background-image: url({{asset('img/ttd-cica.png')}})">
-                <p class="text-small">Dibuat Oleh</p>
-                <p class=" text-small" style="padding-top: 55px !important">Melisa Fiktarina</p>
-                <p class="text-small">Bendahara</p>
+            <div class="stemple">
+                <div class="signature" style="background-image: url({{asset('img/ttd-cica.png')}})">
+                    <p class="text-small">Dibuat Oleh</p>
+                    <p class=" text-small" style="padding-top: 55px !important">Melisa Fiktarina</p>
+                    <p class="text-small">Bendahara</p>
+                </div>
             </div>
+            
             <div class="signature" style="background-image: url({{asset('img/ttd-hermawan.png')}});">
                 <p class="text-small">Diperiksa Oleh</p>
                 <p class="text-small" style="padding-top: 55px !important">Herman Hudiawan</p>
