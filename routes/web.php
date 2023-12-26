@@ -56,4 +56,8 @@ Route::prefix('dashboard')
     Route::get('/rekening', function () {
         return view('rekening.index');
     })->name('rekening.index');
+
+    Route::get('/kwitansi', function () {
+        return view('donate.kwitansi');
+    })->name('donate.kwitansi');
 });

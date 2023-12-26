@@ -1,0 +1,87 @@
+body {
+    font-family: 'Times New Roman', serif;
+    font-size: 12pt;
+    background: #fff;
+    color: #333; /* Default text color */
+}
+p{
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+td{
+    font-size: 10pt;
+}
+th{
+    font-size: 10pt;
+}
+.receipt-container {
+    /* border: 1px solid #000; */
+    /* padding: 10px; */
+    margin: 10px auto;
+    width: 70%;
+    background-color: #f9f9f9; /* Light grey background */
+}
+.text-small {
+    font-size: 10pt;
+}
+.header, .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.space-ttd {
+    display: flex;
+    margin-bottom: 10px;
+}
+.footer {
+    margin-top: 10px;
+}
+.signature {
+    text-align: center;
+    margin-right: 30px;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: 60% 60%;
+}
+.line {
+    border-bottom: 1px solid #000;
+    margin: 5px 0;
+}
+.text-bold {
+    font-weight: bold;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+
+/* Adjust the following colors according to your branding */
+.highlight {
+    color: #d9534f; /* Bootstrap's btn-danger color for highlights */
+}
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.styled-table thead {
+    background-color: #FF8600; /* Orange background */
+    color: #000; /* White text */
+}
+.styled-table tbody tr:nth-child(odd) {
+    background-color: #ffdead; /* Navajo white background for odd rows */
+}
+.styled-table tbody tr:nth-child(even) {
+    background-color: #ffefd5; /* Papaya whip background for even rows */
+}
+.styled-table tfoot {
+    background-color: #FF8600; /* Orange background for footer */
+    color: #000; /* White text */
+}
+.text-right {
+    text-align: right;
+}
