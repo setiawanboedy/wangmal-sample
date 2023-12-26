@@ -15,8 +15,8 @@
 									</div>
 								</div>
 								<div class="col-md-8">
-									<h6 class="font-semibold text-muted">Pelajar</h6>
-									<h6 class="font-extrabold {{ 21 <= 0 ? 'text-danger' : '' }} mb-0">
+									<h6 class="font-semibold text-muted">Asbab</h6>
+									<h6 class="font-extrabold {{ 21 <= 2 ? 'text-danger' : '' }} mb-0">
 										21
 									</h6>
 								</div>
@@ -32,11 +32,11 @@
 							<div class="row">
 								<div class="col-md-4">
 									<div class="stats-icon blue">
-										<i class="iconly-boldBookmark"></i>
+										<i class="iconly-boldCategory"></i>
 									</div>
 								</div>
 								<div class="col-md-8">
-									<h6 class="font-semibold text-muted">Kelas</h6>
+									<h6 class="font-semibold text-muted">Transaksi</h6>
 									<h6 class="font-extrabold {{ 12 <= 0 ? 'text-danger' : '' }} mb-0">
 										12
 									</h6>
@@ -57,7 +57,7 @@
 									</div>
 								</div>
 								<div class="col-md-8">
-									<h6 class="font-semibold text-muted">Jurusan</h6>
+									<h6 class="font-semibold text-muted">Program</h6>
 									<h6 class="font-extrabold {{ 2 <= 0 ? 'text-danger' : '' }} mb-0">
 										2
 									</h6>
@@ -78,7 +78,7 @@
 									</div>
 								</div>
 								<div class="col-md-8">
-									<h6 class="font-semibold text-muted">Kas Bulan Ini</h6>
+									<h6 class="font-semibold text-muted">Saldo</h6>
 									<h6 class="mb-0 font-extrabold">{{ 100000 }}</h6>
 								</div>
 							</div>
@@ -87,6 +87,91 @@
 				</a>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-6 col-lg-3 col-md-6">
+				<a href="#">
+					<div class="card card-stat">
+						<div class="px-3 card-body py-4-5">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="stats-icon red">
+										<i class="iconly-boldActivity"></i>
+									</div>
+								</div>
+								<div class="col-md-8">
+									<h6 class="font-semibold text-muted">Hari</h6>
+									<h6 class="font-extrabold {{ 21 <= 2 ? 'text-danger' : '' }} mb-0">
+										21
+									</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-6 col-lg-3 col-md-6">
+				<a href="#">
+					<div class="card card-stat">
+						<div class="px-3 card-body py-4-5">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="stats-icon green">
+										<i class="iconly-boldActivity"></i>
+									</div>
+								</div>
+								<div class="col-md-8">
+									<h6 class="font-semibold text-muted">Minggu</h6>
+									<h6 class="font-extrabold {{ 12 <= 0 ? 'text-danger' : '' }} mb-0">
+										12
+									</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-6 col-lg-3 col-md-6">
+				<a href="#">
+					<div class="card card-stat">
+						<div class="px-3 card-body py-4-5">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="stats-icon blue">
+										<i class="iconly-boldActivity"></i>
+									</div>
+								</div>
+								<div class="col-md-8">
+									<h6 class="font-semibold text-muted">Bulan</h6>
+									<h6 class="font-extrabold {{ 2 <= 0 ? 'text-danger' : '' }} mb-0">
+										2
+									</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="col-6 col-lg-3 col-md-6">
+				<a href="#">
+					<div class="card card-stat">
+						<div class="px-3 card-body py-4-5">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="stats-icon purple">
+										<i class="iconly-boldActivity"></i>
+									</div>
+								</div>
+								<div class="col-md-8">
+									<h6 class="font-semibold text-muted">Tahun</h6>
+									<h6 class="mb-0 font-extrabold">{{ 100000 }}</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+
 		{{-- @include('dashboard.charts.chart') --}}
 		<div class="row">
 			<div class="col-12 col-xl-12">

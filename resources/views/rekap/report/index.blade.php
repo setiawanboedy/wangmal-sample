@@ -2,7 +2,7 @@
 
 @section('content')
 <section>
-	<div class="row">
+	{{-- <div class="row">
 		<div class="col-6 col-lg-6 col-md-6">
 			<div class="card">
 				<div class="px-3 card-body py-4-4">
@@ -84,12 +84,30 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> --}}
 
 	<div class="row">
 		<div class="px-3 py-3 card">
 			<form action="" method="GET">
 				<label for="start_date" class="pb-3 fw-bold">Filter Data dengan Rentang Tanggal :</label>
+				
+				<h6>Program/Akad</h6>
+				<div class="input-group">
+					<fieldset class="form-group">
+						<select class="form-select" id="basicSelect">
+							<option>Semua</option>
+							<option>BBM</option>
+							<option>MGTS</option>
+							<option>RQJ</option>
+							<option>Palestina</option>
+							<option>Upgrade SDM</option>
+							<option>Pembebasan Lahan</option>
+							<option>Zakat Maal</option>
+							<option>Infak Umum</option>
+							<option>Rangkul Yatim</option>
+						</select>
+					</fieldset>
+				</div>
 				<div class="input-group">
 					<input type="date" name="start_date" class="form-control" placeholder="Pilih tanggal awal..">
 					<input type="date" name="end_date" class="form-control" placeholder="Pilih tanggal akhir..">

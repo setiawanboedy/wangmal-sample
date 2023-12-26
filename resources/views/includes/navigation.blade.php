@@ -43,11 +43,26 @@
 			</a>
 		</li>
 
-		<li class="sidebar-item {{ request()->is('dashboard/report*') ? 'active' : '' }}">
-			<a href="{{ route('report.index') }}" class='sidebar-link'>
-				<i class="bi bi-file-earmark-spreadsheet-fill"></i>
-				<span>Laporan</span>
+		<li class="sidebar-item {{ request()->is('dashboard/rekening*') ? 'active' : '' }}">
+			<a href="{{ route('rekening.index') }}" class='sidebar-link'>
+				<i class="bi bi-journal-bookmark-fill"></i>
+				<span>Rekening</span>
 			</a>
+		</li>
+
+		<li class="sidebar-item has-sub {{ request()->routeIs('rekap.*') ? 'active' : '' }}">
+			<a href="#" class='sidebar-link'>
+				<i class="bi bi-file-earmark-spreadsheet-fill"></i>
+				<span>Rekapan</span>
+			</a>
+			<ul class="submenu {{ request()->routeIs('rekap.*') ? 'active' : '' }}">
+                <li class="submenu-item {{ request()->routeIs('rekap.asbab.index') ? 'active' : '' }}">
+					<a href="{{ route('rekap.asbab.index') }}">Asbab</a>
+				</li>
+				<li class="submenu-item {{ request()->routeIs('rekap.report.index') ? 'active' : '' }}">
+					<a href="{{ route("rekap.report.index") }}">Laporan</a>
+				</li>
+			</ul>
 		</li>
 
 		<li class="sidebar-item {{ request()->is('teams*') ? 'active' : '' }}">

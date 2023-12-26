@@ -45,8 +45,15 @@ Route::prefix('dashboard')
         return view('donate.index');
     })->name('donate.index');
 
-    Route::get('/report', function () {
-        return view('report.index');
-    })->name('report.index');
+    Route::get('rekap/report', function () {
+        return view('rekap.report.index');
+    })->name('rekap.report.index');
 
+    Route::get('rekap/asbab', function () {
+        return view('rekap.asbab.index');
+    })->name('rekap.asbab.index');
+
+    Route::get('/rekening', function () {
+        return view('rekening.index');
+    })->name('rekening.index');
 });
