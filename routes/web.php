@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,14 +27,13 @@ Route::middleware([
 });
 
 Route::prefix('dashboard')
+->namespace('App\Http\Controllers')
     ->middleware([
         'auth:sanctum',
         config('jetstream.auth_session'),
         'verified',
 ])->group(function (){
-    Route::get('/masters/asbab', function () {
-        return view('masters.asbab.index');
-    })->name('masters.asbab.index');
+    Route::get('/masters/asbab', 'AsbabController@index')->name('masters.asbab.index');
 
     Route::get('/masters/program', function () {
         return view('masters.program.index');

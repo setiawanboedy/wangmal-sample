@@ -1,12 +1,12 @@
-<div class="modal fade" id="addAsbabModal" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+<div class="modal fade" id="updateAsbabModal" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title">Tambah Data Asbab</h5>
+				<h5 class="modal-title">Update Data Asbab</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
-				@livewire('masters\asbab.create-asbab')
+				@livewire('masters\asbab.update-asbab')
 			</div>
 		</div>
 	</div>

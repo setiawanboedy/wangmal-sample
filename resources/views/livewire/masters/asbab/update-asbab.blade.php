@@ -1,5 +1,5 @@
 <div>
-    <form wire:submit.prevent='store'>
+    <form wire:submit.prevent='update'>
         @csrf
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-4">
@@ -89,5 +89,5 @@
 </div>
 
 @push('scripts')
-@include('includes.scripts.alert')
+    @include('includes.scripts.alert')
 @endpush

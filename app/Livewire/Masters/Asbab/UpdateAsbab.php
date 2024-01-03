@@ -8,8 +8,10 @@ use Livewire\Attributes\On;
 use Livewire\Attributes\Rule;
 use App\Repositories\AsbabRepository;
 
-class CreateAsbab extends Component
+class UpdateAsbab extends Component
 {
+
+
     public $nip;
 
     #[Rule('required', message: 'Nama tidak boleh kosong')]
@@ -28,44 +30,45 @@ class CreateAsbab extends Component
     #[Rule('integer')]
     public $target;
 
-    
-    public function store()
+    public $asbab_id;
+
+    #[On('asbab-update')] 
+    public function getAsbabEdit($id)
+    {
+        $asbab = Asbab::find($id);
+        $this->nip = $asbab->nip;
+        $this->name = $asbab->name;
+        $this->gender = $asbab->gender;
+        $this->hp = $asbab->hp;
+        $this->target = $asbab->target;
+        $this->asbab_id = $id;
+    }
+
+    public function update()
     {
         $validated = $this->validate();
-        
+
         try {
-            Asbab::create($validated);
+            Asbab::where('id',$this->asbab_id)->update($validated);
 
-            $this->resetInput();
-
+            session()->flash('success','Asbab berhasil diupdate');
             $success = [
                 "title"=>"Berhasil",
-                "text"=>"Asbab berhasil ditambahkan",
+                "text"=>"Asbab berhasil diupdate",
                 "icon"=>"success",
             ];
             $this->dispatch('refreshAsbab', data: $success);
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             $error = [
                 "title"=>"Gagal",
-                "text"=>"Asbab gagal ditambahkan",
+                "text"=>"Asbab gagal diupdate",
                 "icon"=>"error",
             ];
             $this->dispatch('refreshAsbab', data: $error);
         }
     }
-
-    
-    public function resetInput()
-    {
-        $this->nip = NULL;
-        $this->name = NULL;
-        $this->gender = NULL;
-        $this->hp = NULL;
-        $this->target = NULL;
-    }
-
     public function render()
     {
-        return view('livewire.masters.asbab.create-asbab');
+        return view('livewire.masters.asbab.update-asbab');
     }
 }

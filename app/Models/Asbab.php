@@ -2,18 +2,21 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Asbab extends Model
 {
     use HasFactory;
+    use SoftDeletes;
+    
     public $table = 'asbabs';
     protected $fillable = [
         'nip',
         'name',
         'gender',
-        'division',
+        'target',
         'hp',
     ];
 
@@ -21,7 +24,7 @@ class Asbab extends Model
         'nip' => 'required',
         'name' => 'required',
         'gender'=>'required',
-        'division'=>'required',
+        'target'=>'required',
         'hp'=>'required',
     ];
 }

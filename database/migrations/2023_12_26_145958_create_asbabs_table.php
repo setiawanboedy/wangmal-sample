@@ -16,10 +16,10 @@ return new class extends Migration
             $table->bigInteger('nip')->nullable();
             $table->string('name');
             $table->string('gender');
-            $table->string('division');
             $table->bigInteger('hp');
             $table->bigInteger('target');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
