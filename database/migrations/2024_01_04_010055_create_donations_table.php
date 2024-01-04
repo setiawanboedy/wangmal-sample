@@ -8,16 +8,19 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     *
+     * @return void
      */
-    public function up(): void
+    public function up()
     {
-        Schema::create('asbabs', function (Blueprint $table) {
+        Schema::create('donations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('nip')->nullable();
+            $table->integer('program_id');
+            $table->integer('asbab_id');
             $table->string('name');
             $table->tinyInteger('gender');
-            $table->bigInteger('hp');
-            $table->bigInteger('target');
+            $table->string('nominal');
+            $table->date('date');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -25,9 +28,11 @@ return new class extends Migration
 
     /**
      * Reverse the migrations.
+     *
+     * @return void
      */
-    public function down(): void
+    public function down()
     {
-        Schema::dropIfExists('asbabs');
+        Schema::drop('donations');
     }
 };

@@ -6,6 +6,7 @@
             $('#addAsbabModal').modal('hide');
             $('#addProgramModal').modal('hide');
             $('#updateAsbabModal').modal('hide');
+            $('#updateDonateModal').modal('hide');
             Swal.fire({
                 title: event.data['title'],
                 text: event.data['text'],

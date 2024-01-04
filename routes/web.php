@@ -39,9 +39,7 @@ Route::prefix('dashboard')
         return view('masters.program.index');
     })->name('masters.program.index');
 
-    Route::get('/donate', function () {
-        return view('donate.index');
-    })->name('donate.index');
+    Route::get('/donate', 'DonationController@index')->name('donate.index');
 
     Route::get('rekap/report', function () {
         return view('rekap.report.index');

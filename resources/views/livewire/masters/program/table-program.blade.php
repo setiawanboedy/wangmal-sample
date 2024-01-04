@@ -23,7 +23,7 @@
                 <tbody>
                     @foreach ($programs as $program)
                         <tr>
-                            <th>{{$program->id}}</th>
+                            <th>{{$loop->iteration}}</th>
                             <td>{{$program->name}}</td>
                             <td class="text-bold-500">
                                 <div class="gap-2 mb-3 btn-group gap" role="group">

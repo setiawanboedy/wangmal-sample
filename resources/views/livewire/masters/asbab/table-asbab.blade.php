@@ -26,9 +26,9 @@
                 <tbody>
                     @foreach ($asbabs as $asbab)
                     <tr>
-                        <th>{{$asbab->id}}</th>
+                        <th>{{$loop->iteration}}</th>
                         <td>{{$asbab->name}}</td>
-                        <th>{{$asbab->nip}}</th>
+                        <th>{{$asbab->nip ?? '-'}}</th>
                         <td>{{\App\Helper\ConvertGender::genderToString($asbab->gender)}}</td>
                         <td>{{$asbab->hp}}</td>
                         <td class="text-bold-500">
