@@ -43,14 +43,14 @@ class CreateAsbab extends Component
                 "text"=>"Asbab berhasil ditambahkan",
                 "icon"=>"success",
             ];
-            $this->dispatch('refreshAsbab', data: $success);
+            $this->dispatch('refresh', data: $success);
         } catch (\Exception $e) {
             $error = [
                 "title"=>"Gagal",
                 "text"=>"Asbab gagal ditambahkan",
                 "icon"=>"error",
             ];
-            $this->dispatch('refreshAsbab', data: $error);
+            $this->dispatch('refresh', data: $error);
         }
     }
 

@@ -42,7 +42,6 @@
 		</div>
 	</div>
 
-	{{-- @include('utilities.alert-flash-message') --}}
 	@livewire('masters\asbab.table-asbab')
 
 </section>
@@ -50,10 +49,6 @@
 
 @push('modals')
 @include('masters.asbab.modal.create')
-{{-- @include('students.modal.show') --}}
 @include('masters.asbab.modal.update')
 @endpush
 
-@push('scripts')
-{{-- @include('masters.asbab.scripts.datatable') --}}
-@endpush

@@ -1,9 +1,10 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     document.addEventListener('livewire:initialized', () => {
-        @this.on('refreshAsbab', (event) => {
+        @this.on('refresh', (event) => {
             
             $('#addAsbabModal').modal('hide');
+            $('#addProgramModal').modal('hide');
             $('#updateAsbabModal').modal('hide');
             Swal.fire({
                 title: event.data['title'],
@@ -16,7 +17,7 @@
 </script>
 <script>
     document.addEventListener('livewire:initialized', () => {
-        @this.on('asbab-delete', (event) => {
+        @this.on('delete', (event) => {
             Swal.fire({
                 title: 'Apakah anda yakin?',
                 text: "Kamu tidak akan bisa mengembalikannya!",
@@ -37,7 +38,7 @@
 </script>
 <script>
     document.addEventListener('livewire:initialized', () => {
-        @this.on('refreshAsbab', (event) => {
+        @this.on('refresh', (event) => {
             Swal.fire({
                 title: event.data['title'],
                 text: event.data['text'],

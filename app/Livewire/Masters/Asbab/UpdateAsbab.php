@@ -57,14 +57,14 @@ class UpdateAsbab extends Component
                 "text"=>"Asbab berhasil diupdate",
                 "icon"=>"success",
             ];
-            $this->dispatch('refreshAsbab', data: $success);
+            $this->dispatch('refresh', data: $success);
         } catch (Exception $e) {
             $error = [
                 "title"=>"Gagal",
                 "text"=>"Asbab gagal diupdate",
                 "icon"=>"error",
             ];
-            $this->dispatch('refreshAsbab', data: $error);
+            $this->dispatch('refresh', data: $error);
         }
     }
     public function render()

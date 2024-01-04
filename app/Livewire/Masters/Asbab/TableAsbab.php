@@ -18,7 +18,7 @@ class TableAsbab extends Component
 
     public function deleteAsbab(int $asbab_id)
     {
-         $this->dispatch('asbab-delete', id: $asbab_id);
+         $this->dispatch('delete', id: $asbab_id);
         
     }
 
@@ -32,18 +32,18 @@ class TableAsbab extends Component
                 "text"=>"Asbab berhasil dihapus",
                 "icon"=>"success",
             ];
-            $this->dispatch('refreshAsbab', data:$success);
+            $this->dispatch('refresh', data:$success);
         } catch (\Exception $e) {
             $error = [
                 "title"=>"Gagal",
                 "text"=>"Asbab gagal dihapus",
                 "icon"=>"error",
             ];
-            $this->dispatch('refreshAsbab', data: $error);
+            $this->dispatch('refresh', data: $error);
         }
     }
     
-    #[On('refreshAsbab')]
+    #[On('refresh')]
     public function render()
     {
         $asbabs = Asbab::orderBy('id', 'desc')->get();
