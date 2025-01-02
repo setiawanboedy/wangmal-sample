@@ -2,5 +2,5 @@
 ## Wangmal
 
 
-![Wangmal Logo](docs/iamge.jpeg)
+![Wangmal](docs/image.jpeg)
 
